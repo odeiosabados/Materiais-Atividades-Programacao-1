@@ -8,8 +8,10 @@ int main()
 	
 	ifstream arquivo(nomedoarquivo);
 	arquivo>>conteudo;
+	arquivo.close();
+
 	cout<<conteudo;
 	
-	arquivo.close();
 	return 0;
 }
+
