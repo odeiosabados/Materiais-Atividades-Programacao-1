@@ -20,10 +20,13 @@ int main()
 	novototal=novaprestacao*parcela;
 	
 	//saida
-	cout<<fixed<<setprecision(2)<<total<<endl;
-	cout<<fixed<<setprecision(2)<<prestacao<<endl;
-	cout<<fixed<<setprecision(2)<<novaprestacao<<endl;
-	cout<<fixed<<setprecision(2)<<novototal<<endl;
+	ofstream escrever("cliente.txt");
+	escrever<<fixed<<setprecision(2)<<total<<endl;
+	escrever<<fixed<<setprecision(2)<<prestacao<<endl;
+	escrever<<fixed<<setprecision(2)<<novaprestacao<<endl;
+	escrever<<fixed<<setprecision(2)<<novototal<<endl;
+	escrever.close();
 	
 	return 0;
 }
+
