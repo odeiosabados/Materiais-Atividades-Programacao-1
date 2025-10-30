@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -11,8 +12,8 @@ int main()
 	
 	//operacoes
 	grau=graudecimal;
-	minuto=(graudecimal-grau)*60;
-	segundo=(((graudecimal-grau)*60)-minuto)*60;
+	minuto=abs(graudecimal-grau)*60;
+	segundo=((abs(graudecimal-grau)*60)-minuto)*60;
 	
 	//saida
 	cout<<grau<<endl;
@@ -28,3 +29,4 @@ int main()
 	
 	return 0;
 }
+
